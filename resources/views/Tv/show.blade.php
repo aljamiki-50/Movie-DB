@@ -175,7 +175,7 @@
                     @if ($loop->index < 8)
                         <div class="mt-8">
                             <a href="{{ route('actors.show', $cast['id']) }}">
-                                <img src="{{ 'https://image.tmdb.org/t/p/w500/' . $cast['profile_path'] }}"
+                                <img src="{{ 'https://image.tmdb.org/t/p/w500/' . $cast['profile_path']  }}"
                                     class="hover:opacity-75 transition-ease-in-out duration-150" alt="">
                             </a>
                             <div class=" mt-2">
