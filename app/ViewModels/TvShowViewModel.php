@@ -55,7 +55,7 @@ class TvShowViewModel extends ViewModel
             "images" => collect($this->tvshow['images']['backdrops'])->take(12),
             "img" => collect($this->tvshow['images']['backdrops'])->take(12),
             "name" => $this->tvshow['name'],
-            "video" => $liam,
+            "video" => $liam ?? null,
         ])->only([
             "poster_path", "id", "job", "genre_ids",
             "first_air_date", "title", "created_by",
@@ -65,7 +65,7 @@ class TvShowViewModel extends ViewModel
     }
     public function videos()
     {
-        dump($this->tvshow);
+        // dump($this->tvshow);
     }
 
     public function tv()
@@ -78,6 +78,6 @@ class TvShowViewModel extends ViewModel
 
     public function tvvideo()
     {
-        dump($this->tvshows());
+        // dump($this->tvshows());
     }
 }

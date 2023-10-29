@@ -69,7 +69,7 @@
 
                                 </div>
                             @else
-                            @break
+                            @breag
                         @endif
                     @endforeach
                 </div>

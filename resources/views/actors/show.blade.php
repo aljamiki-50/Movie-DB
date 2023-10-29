@@ -95,7 +95,7 @@
                                 <a href="{{ $movie['linkToPage'] }}"
                                     class="text-sm leading-normal block text-gray-400 hover:text-white mt-1">{{ $movie['title'] }}</a>
                             </div>
-                        @endforeach 
+                        @endforeach
                     </div>
                 </div>
                 {{-- end  of know for part with 5 top-shows to show  --}}
@@ -123,7 +123,7 @@
                 @foreach ($credits as $credit)
                     <li>
                         {{ $credit['release_year'] }} &middot;
-                        <strong><a href="#" class="hover:underline">#</a></strong>
+                        <strong><a href="{{ $credit['linkToPage'] }}" class="hover:underline  text-blue-500"> {{ $credit['title'] }}</a></strong>
                         as {{ $credit['character'] }}
                     </li>
                 @endforeach

@@ -27,20 +27,16 @@ class ActorViewmodel extends ViewModel
     public function render()
     {
 
-        dump($this->knownForMovies());
+        // dump($this->knownForMovies());
     }
 
     public function vendo()
     {
 
-        dump($this->actor());
+        // dump($this->actor());
     }
 
-    public function wild()
-    {
-
-        dump($this->tvshow());
-    }
+   
 
 
     public function tvshow()
@@ -84,7 +80,7 @@ class ActorViewmodel extends ViewModel
             "first_air_date", "title", "created_by",
             "vote_average", "overview", "release_date",
             "genres", "video", "image", "name", "crew", "cast", "images", "original_title"
-        ])->dump();
+        ]);
     }
 
 
@@ -255,6 +251,8 @@ class ActorViewmodel extends ViewModel
                 'release_year' => isset($releaseDate) ? Carbon::parse($releaseDate)->format('Y') : 'Future',
                 'title' => $title,
                 'character' => isset($movie['character']) ? $movie['character'] : '',
+                'linkToPage' => $movie['media_type'] === 'movie' ? route('movies.show', $movie['id']) : route('tv.show', $movie['id'])
+
                 // 'linkToPage' => $movie['media_type'] === 'movie' ? route('movies.show', $movie['id']) : route('tv.show', $movie['id']),
             ])->only([
                 'release_date', 'release_year', 'title', 'character', 'linkToPage',

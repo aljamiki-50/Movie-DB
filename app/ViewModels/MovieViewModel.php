@@ -13,9 +13,7 @@ class MovieViewModel extends ViewModel
         $this->movie = $movie;
     }
 
-    public function toString()   {
-        dump($this->movie);
-    }
+    
 
     // public function video() {
 
@@ -114,7 +112,7 @@ class MovieViewModel extends ViewModel
             "images" => $images,
 
         ])->only(["poster_path", "id", "genre_ids", "title", "vote_average",
-         "overview", "release_date", "genres", "videos", "image", "crew", "cast", "images", "original_title"])->dump();
+         "overview", "release_date", "genres", "videos", "image", "crew", "cast", "images", "original_title"]);
             
     }
 
