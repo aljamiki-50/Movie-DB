@@ -2,6 +2,8 @@ id: 53774
 name: work
 environments:
   production:
+  runtime: php-7.4
+        # ... other configurations
     memory: 1024
     cli-memory: 512
     build:
@@ -14,6 +16,9 @@ environments:
     domain: andredemos.ca
     storage: drehimself
     database: my-test-database
+    teams:
+    my-team:
+        name: personal
     build:
       - "composer install --classmap-authoritative"
       - "php artisan event:cache"
