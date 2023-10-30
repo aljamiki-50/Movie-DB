@@ -35,7 +35,7 @@ class TvShowViewModel extends ViewModel
             return $video['key'];
         }, $this->tvshow['videos']['results']);
         
-       dump($other);
+    //    dump($other);
 
         
 
