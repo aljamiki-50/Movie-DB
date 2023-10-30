@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.spinner{
+
+    background-color: transparent;
+    position: absolute;
+}
+
+.animate-bounce {
+    animation: bounce 7s infinite;
+}

@@ -1,0 +1,56 @@
+<!-- Walk as if you are kissing the Earth with your feet. - Thich Nhat Hanh -->
+
+<!-- Simplicity is the essence of happiness. - Cedric Bledsoe -->
+
+
+<div class="mt-8">
+
+    <a href="{{ route('tv.show',$tvshows['id']) }}"><img src="{{ $tvshows['poster_path'] }}"
+            class=" hover:opacity-75 transition-ease-in-out duration-150" alt="joker"></a>
+
+    <div class=" mt-2"><a href="{{ route('tv.show', $tvshows['id']) }}"
+            class="text-lg hover:text-gray-500">{{ $tvshows['name'] }}</a></div>
+    <div class="flex  items-center mt-2 text-gray-400">
+        <span> <svg class="fill-current text-orange-500 w-4" viewBox="0 0 24 24">
+                <g data-name="Layer 2">
+                    <path
+                        d="M17.56 21a1 1 0 01-.46-.11L12 18.22l-5.1 2.67a1 1
+                                                    0 01-1.45-1.06l1-5.63-4.12-4a1 1 0 01-.25-1 1 1
+                                                    0 01.81-.68l5.7-.83 2.51-5.13a1 1 0 011.8 0l2.54 5.12 5.7.83a1
+                                                    1 0 01.81.68 1 1 0 01-.25 1l-4.12 4 1 5.63a1 1 0 01-.4 1 1 1 0 01-.62.18z"
+                        data-name="star" />
+
+                </g>
+            </svg>
+
+           
+
+        </span>
+
+        <span class="ml-1">{{ $tvshows['vote_average'] }}</span>
+        <span class="mx-2">|</span>
+        <span>{{ $tvshows['first_air_date'] }}</span>
+        {{-- <span>{{ $movie['overview'] }}</span> --}}
+    </div>
+    <div>
+        {{-- we had it thorugh foreach loop and we looped through thme and passed it out  --}}
+        {{-- @foreach ($movie['genre_ids'] as $genre)
+            {{ $genres->get($genre) }} @if (!$loop->last)
+                ,
+                
+            @endif
+        @endforeach --}}
+
+        {{ $tvshows['genres'] }}
+       
+
+
+    </div>
+
+    <div>
+
+        
+
+    </div>
+
+</div>
