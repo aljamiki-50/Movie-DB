@@ -1,8 +1,10 @@
-
-
+// vite.config.js
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
-import VitePurgeCSS from 'vite-plugin-purgecss';
+import postcss from 'rollup-plugin-postcss';
+import autoprefixer from 'autoprefixer';
+import cssnano from 'cssnano';
+import purgecss from '@fullhuman/postcss-purgecss';
 
 export default defineConfig({
   plugins: [
@@ -10,11 +12,15 @@ export default defineConfig({
       input: ['resources/css/app.css', 'resources/js/app.js'],
       refresh: true,
     }),
-    VitePurgeCSS({
-      content: ['index.html', 'src/**/*.vue'], // Adjust the paths as per your project structure
+    postcss({
+      plugins: [
+        autoprefixer(),
+        cssnano(),
+        purgecss({
+          content: ['index.html', 'src/**/*.vue'],
+          // Adjust other options as needed
+        }),
+      ],
     }),
   ],
 });
-
-
-
